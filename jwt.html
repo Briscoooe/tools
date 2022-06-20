@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Tools - Network</title>
+    <script src="custom-header.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<custom-header></custom-header>
+<textarea id="content"></textarea>
+<code id="result"></code>
+<button onclick="parseJwt()">Send</button>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+<script>
+  function parseJwt () {
+    const token = document.getElementById('content').value;
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    document.getElementById('result').innerHTML = jsonPayload
+  }
+
+</script>
+</body>
+</html>

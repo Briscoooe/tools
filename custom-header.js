@@ -6,6 +6,7 @@ class MyComponent extends HTMLElement {
         <ul>
             <li><a href="character-count.html">Character count</a></li>
             <li><a href="base64.html">Base 64 encode/decode</a></li>
+            <li><a href="jwt.html">JWT</a></li>
         <ul>
     `;
   }
