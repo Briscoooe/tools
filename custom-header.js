@@ -7,6 +7,7 @@ class MyComponent extends HTMLElement {
             <li><a href="character-count.html">Character count</a></li>
             <li><a href="base64.html">Base 64 encode/decode</a></li>
             <li><a href="jwt.html">JWT</a></li>
+            <li><a href="json-to-csv.html">JSON to CSV</a></li>
             <li><a href="json.html">JSON</a></li>
         <ul>
     `;
