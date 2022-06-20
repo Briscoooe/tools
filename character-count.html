@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Tools - Character count</title>
+    <script src="custom-header.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <custom-header></custom-header>
+    <textarea id="content"></textarea>
+    <span id="result"></span>
+    <script>
+      function updateValue(e) {
+        document.getElementById('result').innerHTML = content.value.length;
+      }
+      const content = document.getElementById('content');
+      content.addEventListener('change', updateValue);
+      content.addEventListener('keyup', updateValue);
+      content.addEventListener('keydown', updateValue);
+    </script>
+</body>
+</html>

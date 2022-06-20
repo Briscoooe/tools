@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - Base 64</title>
+    <script src="custom-header.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <custom-header></custom-header>
+    <textarea id="encode-content"></textarea>
+    <span id="encode-result"></span>
+    <button onclick="encode()">Encode</button>
+    <textarea id="decode-content"></textarea>
+    <span id="decode-result"></span>
+    <button onclick="decode()">Decode</button>
+
+    <script>
+      function encode(key) {
+        const content = document.getElementById('encode-content').value;
+        document.getElementById('encode-result').innerHTML = btoa(content);
+      }
+        function decode(key) {
+            const content = document.getElementById('decode-content').value;
+            document.getElementById('decode-result').innerHTML = atob(content);
+        }
+    </script>
+</body>
+</html>
