@@ -1,4 +1,5 @@
 // https://codepen.io/pookagehayes/pen/JjpMwGq
+// https://kinsta.com/blog/web-components/
 const template = document.createElement("template");
 class MyComponent extends HTMLElement {
   connectedCallback() {
@@ -9,6 +10,7 @@ class MyComponent extends HTMLElement {
             <li><a href="jwt.html">JWT</a></li>
             <li><a href="json-to-csv.html">JSON to CSV</a></li>
             <li><a href="json.html">JSON</a></li>
+            <li><a href="sed.html">Search and replace</a></li>
         <ul>
     `;
   }
