@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Tools - JSON</title>
     <script src="custom-header.js"></script>
     <link rel="stylesheet" href="index.css">
@@ -12,9 +12,9 @@
 <code id="result"></code>
 <button onclick="unescape()">Unescape</button>
 <script>
-  function unescape () {
+  function unescape() {
     let json = document.getElementById('content').value.trim();
-    json = json.replace(/\\/g,"");
+    json = json.replace(/\\/g, "");
 
     document.getElementById('result').innerHTML = json
   }

@@ -1,10 +1,12 @@
 // https://codepen.io/pookagehayes/pen/JjpMwGq
+// https://github.com/thepassle/generic-components/blob/master/generic-tabs/GenericTabs.js
 // https://kinsta.com/blog/web-components/
 const template = document.createElement("template");
+
 class MyComponent extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <ul>
+        <ul class="nav-list">
             <li><a href="character-count.html">Character count</a></li>
             <li><a href="base64.html">Base 64 encode/decode</a></li>
             <li><a href="jwt.html">JWT</a></li>
@@ -16,4 +18,4 @@ class MyComponent extends HTMLElement {
   }
 }
 
-customElements.define( 'custom-header', MyComponent );
+customElements.define('custom-header', MyComponent);
