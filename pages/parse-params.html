@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - URL encode/decode</title>
+    <script src="../components/custom-header.js"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<custom-header></custom-header>
+<textarea id="content"></textarea>
+<button onclick="parseParams()">Parse</button>
+<code id="result"></code>
+<script>
+  function parseParams() {
+    const content = document.getElementById('content').value;
+    const url = new URL(content);
+    const params = url.search.substring(1).split('&');
+    console.log(params);
+    const rows = params.map((p) => {
+      let elements = p.split('=');
+      return `<tr><td>${elements[0]}</td><td>${elements[1]}</td></tr>`;
+    })
+    const table = `<table>
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Value</td>
+        </tr>
+        </thead>
+        <tbody>
+            ${rows}
+        </tbody>
+    </table>`
+    document.getElementById('result').innerHTML = table;
+  }
+
+</script>
+</body>
+</html>
