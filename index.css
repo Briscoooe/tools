@@ -55,9 +55,14 @@
         color: white;
     }
     #result {
+        cursor: pointer;
         font-size: larger;
         background: white;
+        word-wrap: anywhere;
         width: 100%;
         padding: 10px 20px;
+    }
+    #result:hover {
+        background: #f0f0f0;
     }
 }

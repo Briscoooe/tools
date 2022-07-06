@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - JWT</title>
-    <script src="custom-header.js"></script>
-    <script src="custom-container.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="../components/custom-header.js"></script>
+    <script src="../components/custom-container.js"></script>
+    <link rel="stylesheet" href="../index.css">
 </head>
 <body>
 <custom-header></custom-header>
 <textarea id="content"></textarea>
 <code id="result"></code>
-<button onclick="parseJwt()">Send</button>
+<button onclick="parseJwt()">Parse</button>
 <script>
   function parseJwt() {
     const token = document.getElementById('content').value;

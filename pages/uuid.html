@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - JWT</title>
+    <script src="../components/custom-header.js"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<custom-header></custom-header>
+<button onclick="generate()">Generate</button>
+<code id="result"></code>
+<script>
+  const crypto = window.crypto;
+  const result = document.getElementById('result')
+  function generate() {
+    result.innerHTML = crypto.randomUUID();
+  }
+  result.addEventListener('click', function() {
+    navigator.clipboard.writeText(result.innerHTML);
+  });
+
+</script>
+</body>
+</html>
