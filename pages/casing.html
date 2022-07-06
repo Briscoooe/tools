@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - Sort</title>
+    <script src="../components/custom-header.js"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<custom-header></custom-header>
+<textarea id="content"></textarea>
+<button onclick="changeCase()">Change case</button>
+<select title="case choice" id="case-choice">
+    <option value="upper">To uppercase</option>
+    <option value="lower">To lowercase</option>
+</select>
+<code id="result"></code>
+<script>
+  function changeCase() {
+    const content = document.getElementById('content').value;
+    const caseChoice = document.getElementById('case-choice').value;
+    if (caseChoice === 'upper') {
+      document.getElementById('result').innerHTML = content.toUpperCase();
+    } else {
+      document.getElementById('result').innerHTML = content.toLowerCase();
+    }
+  }
+
+</script>
+</body>
+</html>

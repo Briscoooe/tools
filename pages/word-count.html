@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - Word count</title>
+    <script src="../components/custom-header.js"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<custom-header></custom-header>
+<textarea id="content"></textarea>
+<span id="result"></span>
+<script>
+  function updateValue(e) {
+    console.log(content.value.split('\w'))
+    document.getElementById('result').innerHTML = content.value.split('\s').length.toString()
+  }
+
+  const content = document.getElementById('content');
+  content.addEventListener('change', updateValue);
+  content.addEventListener('keyup', updateValue);
+  content.addEventListener('keydown', updateValue);
+</script>
+</body>
+</html>
