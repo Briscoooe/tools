@@ -11,6 +11,7 @@ class MyComponent extends HTMLElement {
             <li><a href="../pages/sort.html">Sort</a></li>
             <li><a href="../pages/casing.html">Casing</a></li>
             <li><a href="../pages/parse-params.html">Parse params</a></li>
+            <li><a href="../pages/unix-time.html">Unix time</a></li>
             <li><a href="../pages/url-encode-decode.html">URL encode/decode</a></li>
             <li><a href="../pages/word-count.html">Word count</a></li>
             <li><a href="../pages/base64.html">Base 64 encode/decode</a></li>

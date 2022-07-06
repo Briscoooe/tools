@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - URL encode/decode</title>
+    <script src="../components/custom-header.js"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<custom-header></custom-header>
+<select title="Operation choice" id="operation-choice">
+    <option value="to">To timestamp</option>
+    <option value="from">From timestamp</option>
+</select>
+<input id="from-date" type="date"/>
+<!--<textarea id="content"></textarea>-->
+<button onclick="convert()">Convert</button>
+<code id="result"></code>
+<script>
+  function convert() {
+    const operation = document.getElementById('operation-choice').value;
+    if (operation === 'to') {
+      const fromDate = document.getElementById('from-date').value;
+      document.getElementById('result').innerHTML = new Date(fromDate).toTimeString()
+    }
+  }
+
+</script>
+</body>
+</html>
