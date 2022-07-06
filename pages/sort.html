@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - Sort</title>
+    <script src="../components/custom-header.js"></script>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<custom-header></custom-header>
+<textarea id="content"></textarea>
+<button onclick="sort()">Sort</button>
+<select title="direction" id="sort-direction">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<code id="result"></code>
+<script>
+  function sort() {
+    const content = document.getElementById('content').value.split('\n');
+    const sortDirection = document.getElementById('sort-direction').value;
+    let sortedContent;
+    if (sortDirection === 'asc') {
+      sortedContent = content.sort((a, b) => a - b);
+    } else {
+      sortedContent = content.sort((a, b) => b - a);
+    }
+    document.getElementById('result').innerHTML = sortedContent.join('<br>');
+  }
+
+</script>
+</body>
+</html>

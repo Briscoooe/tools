@@ -8,6 +8,7 @@ class MyComponent extends HTMLElement {
     this.innerHTML = `
         <ul class="nav-list">
             <li><a href="../pages/character-count.html">Character count</a></li>
+            <li><a href="../pages/sort.html">Sort</a></li>
             <li><a href="../pages/base64.html">Base 64 encode/decode</a></li>
             <li><a href="../pages/jwt.html">JWT</a></li>
             <li><a href="../pages/json-to-csv.html">JSON to CSV</a></li>
