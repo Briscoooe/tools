@@ -2,44 +2,44 @@ const footerTemplate = document.createElement('template');
 
 footerTemplate.innerHTML = `
   <style>
-    footer {
-      height: 60px;
-      padding: 0 10px;
-      list-style: none;
-      display: flex;
-      flex-shrink: 0;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #dfdfe2;
-    }
-
-    ul {
-      padding: 0;
-    }
+    /*footer {*/
+    /*  height: 60px;*/
+    /*  padding: 0 10px;*/
+    /*  list-style: none;*/
+    /*  display: flex;*/
+    /*  flex-shrink: 0;*/
+    /*  justify-content: space-between;*/
+    /*  align-items: center;*/
+    /*  background-color: #dfdfe2;*/
+    /*}*/
     
-    ul li {
-      list-style: none;
-      display: inline;
-    }
+    /*ul {*/
+    /*  padding: 0;*/
+    /*}*/
     
-    a {
-      margin: 0 15px;
-      color: inherit;
-      text-decoration: none;
-    }
+    /*ul li {*/
+    /*  list-style: none;*/
+    /*  display: inline;*/
+    /*}*/
     
-    a:hover {
-      padding-bottom: 5px;
-      box-shadow: inset 0 -2px 0 0 #333;
-    }
+    /*a {*/
+    /*  margin: 0 15px;*/
+    /*  color: inherit;*/
+    /*  text-decoration: none;*/
+    /*}*/
     
-    .social-row {
-      font-size: 20px;
-    }
+    /*a:hover {*/
+    /*  padding-bottom: 5px;*/
+    /*  box-shadow: inset 0 -2px 0 0 #333;*/
+    /*}*/
     
-    .social-row li a {
-      margin: 0 15px;
-    }
+    /*.social-row {*/
+    /*  font-size: 20px;*/
+    /*}*/
+    
+    /*.social-row li a {*/
+    /*  margin: 0 15px;*/
+    /*}*/
   </style>
   <footer>
     <ul>

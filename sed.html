@@ -3,16 +3,18 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - JWT</title>
-    <script src="components/navbar.js"></script>
+    <script src="components/header.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<custom-header></custom-header>
-<textarea id="content"></textarea>
-<input id="search-for" type="text" placeholder="Search for...">
-<input id="replace-with" type="text" placeholder="Replace with...">
-<button onclick="sed()">Go</button>
-<code id="result"></code>
+<header-component></header-component>
+<main>
+    <textarea id="content"></textarea>
+    <input id="search-for" type="text" placeholder="Search for...">
+    <input id="replace-with" type="text" placeholder="Replace with...">
+    <button onclick="sed()">Go</button>
+    <code id="result"></code>
+</main>
 <script>
   function sed() {
     const content = document.getElementById('content').value;

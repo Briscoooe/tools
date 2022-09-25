@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - Sort</title>
-    <script src="components/navbar.js"></script>
+    <script src="components/header.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<custom-header></custom-header>
-<textarea id="content"></textarea>
-<button onclick="changeCase()">Change case</button>
-<select title="case choice" id="case-choice">
-    <option value="upper">To uppercase</option>
-    <option value="lower">To lowercase</option>
-</select>
-<code id="result"></code>
+<header-component></header-component>
+<main>
+    <textarea id="content"></textarea>
+    <button onclick="changeCase()">Change case</button>
+    <select title="case choice" id="case-choice">
+        <option value="upper">To uppercase</option>
+        <option value="lower">To lowercase</option>
+    </select>
+    <code id="result"></code>
+</main>
 <script>
   function changeCase() {
     const content = document.getElementById('content').value;

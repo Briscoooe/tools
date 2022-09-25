@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - JWT</title>
-    <script src="components/navbar.js"></script>
+    <script src="components/header.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<custom-header></custom-header>
-<button onclick="generate()">Generate</button>
-<code id="result" ></code>
+<header-component></header-component>
+<main>
+    <button onclick="generate()">Generate</button>
+    <code id="result" ></code>
+</main>
 <script>
   const crypto = window.crypto;
   const result = document.getElementById('result')

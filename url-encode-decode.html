@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - URL encode/decode</title>
-    <script src="components/navbar.js"></script>
+    <script src="components/header.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<custom-header></custom-header>
-<textarea id="content"></textarea>
-<button onclick="performOperation()">Submit</button>
-<select title="Operation choice" id="operation-choice">
-    <option value="encode">Encode</option>
-    <option value="decode">Decode</option>
-</select>
-<code id="result"></code>
+<header-component></header-component>
+<main>
+    <textarea id="content"></textarea>
+    <button onclick="performOperation()">Submit</button>
+    <select title="Operation choice" id="operation-choice">
+        <option value="encode">Encode</option>
+        <option value="decode">Decode</option>
+    </select>
+    <code id="result"></code>
+</main>
 <script>
   function performOperation() {
     const content = document.getElementById('content').value;

@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - Character count</title>
-    <script src="components/navbar.js"></script>
+    <script src="components/header.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<custom-header></custom-header>
-<textarea id="content"></textarea>
-<span id="result"></span>
+<header-component></header-component>
+<main>
+    <textarea id="content"></textarea>
+    <span id="result"></span>
+</main>
 <script>
   function updateValue(e) {
     document.getElementById('result').innerHTML = content.value.length;

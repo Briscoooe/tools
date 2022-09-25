@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Tools - JWT</title>
     <script src="components/header.js"></script>
-    <script src="components/footer.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <header-component></header-component>
 <main>
-    <textarea id="content"></textarea>
-    <code id="result"></code>
-    <button onclick="parseJwt()">Parse</button>
+    <article>
+        <textarea id="content"></textarea>
+        <code id="result"></code>
+        <button onclick="parseJwt()">Parse</button>
+    </article>
 </main>
-<footer-component></footer-component>
-
 <script>
   function parseJwt() {
     const token = document.getElementById('content').value;

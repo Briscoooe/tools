@@ -3,14 +3,16 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - JWT</title>
-    <script src="components/navbar.js"></script>
+    <script src="components/header.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<custom-header></custom-header>
-<textarea id="content"></textarea>
-<code id="result"></code>
-<button onclick="jsonToCsv()">Parse</button>
+<header-component></header-component>
+<main>
+    <textarea id="content"></textarea>
+    <code id="result"></code>
+    <button onclick="jsonToCsv()">Parse</button>
+</main>
 <script>
   function jsonToCsv() {
     console.log(document.getElementById('content').value);

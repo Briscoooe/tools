@@ -3,19 +3,20 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - URL encode/decode</title>
-    <script src="components/navbar.js"></script>
+    <script src="components/header.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<custom-header></custom-header>
-<select title="Operation choice" id="operation-choice">
-    <option value="to">To timestamp</option>
-    <option value="from">From timestamp</option>
-</select>
-<input id="from-date" type="date"/>
-<!--<textarea id="content"></textarea>-->
-<button onclick="convert()">Convert</button>
-<code id="result"></code>
+<header-component></header-component>
+<main>
+    <select title="Operation choice" id="operation-choice">
+        <option value="to">To timestamp</option>
+        <option value="from">From timestamp</option>
+    </select>
+    <input id="from-date" type="date"/>
+    <button onclick="convert()">Convert</button>
+    <code id="result"></code>
+</main>
 <script>
   function convert() {
     const operation = document.getElementById('operation-choice').value;
