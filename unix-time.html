@@ -22,7 +22,7 @@
     const operation = document.getElementById('operation-choice').value;
     if (operation === 'to') {
       const fromDate = document.getElementById('from-date').value;
-      document.getElementById('output').innerHTML = new Date(fromDate).toTimeString()
+      document.getElementById('output').innerHTML = new Date(fromDate).toISOString()
     }
   }
 
