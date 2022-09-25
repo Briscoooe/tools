@@ -10,7 +10,7 @@
 <sidebar-component></sidebar-component>
 <main>
     <textarea id="content"></textarea>
-    <code id="result"></code>
+    <code id="output"></code>
     <button onclick="jsonToCsv()">Parse</button>
 </main>
 <script>
@@ -22,7 +22,7 @@
     let csv = items.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(','));
     csv.unshift(header.join(','));
     csv = csv.join('\r\n');
-    document.getElementById('result').innerHTML = csv;
+    document.getElementById('output').innerHTML = csv;
   }
 
 </script>

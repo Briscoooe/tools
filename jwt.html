@@ -10,7 +10,7 @@
 <main>
     <article>
         <textarea id="content"></textarea>
-        <code id="result"></code>
+        <code id="output"></code>
         <button onclick="parseJwt()">Parse</button>
     </article>
 </main>
@@ -23,7 +23,7 @@
       return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));
 
-    document.getElementById('result').innerHTML = jsonPayload
+    document.getElementById('output').innerHTML = jsonPayload
   }
 
 </script>

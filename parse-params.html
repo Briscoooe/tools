@@ -11,7 +11,7 @@
 <main>
     <textarea id="content"></textarea>
     <button onclick="parseParams()">Parse</button>
-    <code id="result"></code>
+    <code id="output"></code>
 </main>
 <script>
   function parseParams() {
@@ -34,7 +34,7 @@
             ${rows}
         </tbody>
     </table>`
-    document.getElementById('result').innerHTML = table;
+    document.getElementById('output').innerHTML = table;
   }
 
 </script>

@@ -10,22 +10,22 @@
 <sidebar-component></sidebar-component>
 <main>
     <textarea id="encode-content"></textarea>
-    <span id="encode-result"></span>
+    <span id="encode-output"></span>
     <button onclick="encode()">Encode</button>
     <textarea id="decode-content"></textarea>
-    <span id="decode-result"></span>
+    <span id="decode-output"></span>
     <button onclick="decode()">Decode</button>
 </main>
 
 <script>
   function encode(key) {
     const content = document.getElementById('encode-content').value;
-    document.getElementById('encode-result').innerHTML = btoa(content);
+    document.getElementById('encode-output').innerHTML = btoa(content);
   }
 
   function decode(key) {
     const content = document.getElementById('decode-content').value;
-    document.getElementById('decode-result').innerHTML = atob(content);
+    document.getElementById('decode-output').innerHTML = atob(content);
   }
 </script>
 </body>

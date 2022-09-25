@@ -13,7 +13,7 @@
     <input id="search-for" placeholder="Search for..." type="text">
     <input id="replace-with" placeholder="Replace with..." type="text">
     <button onclick="sed()">Go</button>
-    <code id="result"></code>
+    <code id="output"></code>
 </main>
 <script>
   function sed() {
@@ -22,7 +22,7 @@
     const replaceWith = document.getElementById('replace-with').value;
 
     const regex = new RegExp(searchFor, 'g');
-    document.getElementById('result').innerHTML = content.replace(regex, replaceWith);
+    document.getElementById('output').innerHTML = content.replace(regex, replaceWith);
   }
 
 </script>

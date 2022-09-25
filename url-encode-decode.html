@@ -15,16 +15,16 @@
         <option value="encode">Encode</option>
         <option value="decode">Decode</option>
     </select>
-    <code id="result"></code>
+    <code id="output"></code>
 </main>
 <script>
   function performOperation() {
     const content = document.getElementById('content').value;
     const operation = document.getElementById('operation-choice').value;
     if (operation === 'encode') {
-      document.getElementById('result').innerHTML = encodeURI(content)
+      document.getElementById('output').innerHTML = encodeURI(content)
     } else {
-      document.getElementById('result').innerHTML = decodeURI(content)
+      document.getElementById('output').innerHTML = decodeURI(content)
     }
   }
 

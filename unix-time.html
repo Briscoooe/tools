@@ -15,14 +15,14 @@
     </select>
     <input id="from-date" type="date"/>
     <button onclick="convert()">Convert</button>
-    <code id="result"></code>
+    <code id="output"></code>
 </main>
 <script>
   function convert() {
     const operation = document.getElementById('operation-choice').value;
     if (operation === 'to') {
       const fromDate = document.getElementById('from-date').value;
-      document.getElementById('result').innerHTML = new Date(fromDate).toTimeString()
+      document.getElementById('output').innerHTML = new Date(fromDate).toTimeString()
     }
   }
 

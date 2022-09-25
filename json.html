@@ -10,7 +10,7 @@
 <sidebar-component></sidebar-component>
 <main>
     <textarea id="content"></textarea>
-    <code id="result"></code>
+    <code id="output"></code>
     <button onclick="unescape()">Unescape</button>
 </main>
 <script>
@@ -18,7 +18,7 @@
     let json = document.getElementById('content').value.trim();
     json = json.replace(/\\/g, "");
 
-    document.getElementById('result').innerHTML = json
+    document.getElementById('output').innerHTML = json
   }
 
 </script>

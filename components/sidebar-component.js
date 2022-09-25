@@ -73,7 +73,7 @@ class SidebarComponent extends HTMLElement {
     this.innerHTML = `
       <nav id="sidebar">
       ${linkGroups.map(group => `
-        <div class="sidebar-group">
+        <div>
           <h4>${group.name}</h4>
           <ul>
             ${group.links.map(link => `

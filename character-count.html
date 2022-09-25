@@ -10,11 +10,11 @@
 <sidebar-component></sidebar-component>
 <main>
     <textarea id="content"></textarea>
-    <span id="result"></span>
+    <span id="output"></span>
 </main>
 <script>
   function updateValue(e) {
-    document.getElementById('result').innerHTML = content.value.length;
+    document.getElementById('output').innerHTML = content.value.length;
   }
 
   const content = document.getElementById('content');

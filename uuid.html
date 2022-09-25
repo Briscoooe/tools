@@ -10,18 +10,18 @@
 <sidebar-component></sidebar-component>
 <main>
     <button onclick="generate()">Generate</button>
-    <code id="result"></code>
+    <code id="output"></code>
 </main>
 <script>
   const crypto = window.crypto;
-  const result = document.getElementById('result')
+  const output = document.getElementById('output')
 
   function generate() {
-    result.innerHTML = crypto.randomUUID();
+    output.innerHTML = crypto.randomUUID();
   }
 
-  result.addEventListener('click', function () {
-    navigator.clipboard.writeText(result.innerHTML);
+  output.addEventListener('click', function () {
+    navigator.clipboard.writeText(output.innerHTML);
   });
 
 </script>
