@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - JWT</title>
-    <script src="components/header.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="components/sidebar-component.js"></script>
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
-<header-component></header-component>
+<sidebar-component></sidebar-component>
 <main>
     <textarea id="content"></textarea>
-    <input id="search-for" type="text" placeholder="Search for...">
-    <input id="replace-with" type="text" placeholder="Replace with...">
+    <input id="search-for" placeholder="Search for..." type="text">
+    <input id="replace-with" placeholder="Replace with..." type="text">
     <button onclick="sed()">Go</button>
     <code id="result"></code>
 </main>

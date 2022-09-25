@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - Sort</title>
-    <script src="components/header.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="components/sidebar-component.js"></script>
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
-<header-component></header-component>
+<sidebar-component></sidebar-component>
 <main>
 
     <textarea id="content"></textarea>
     <button onclick="sort()">Sort</button>
-    <select title="direction" id="sort-direction">
+    <select id="sort-direction" title="direction">
         <option value="asc">Ascending</option>
         <option value="desc">Descending</option>
     </select>

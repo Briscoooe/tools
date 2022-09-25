@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - Base 64</title>
-    <script src="components/header.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="components/sidebar-component.js"></script>
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
-<header-component></header-component>
-    <main>
-        <textarea id="encode-content"></textarea>
-        <span id="encode-result"></span>
-        <button onclick="encode()">Encode</button>
-        <textarea id="decode-content"></textarea>
-        <span id="decode-result"></span>
-        <button onclick="decode()">Decode</button>
-    </main>
+<sidebar-component></sidebar-component>
+<main>
+    <textarea id="encode-content"></textarea>
+    <span id="encode-result"></span>
+    <button onclick="encode()">Encode</button>
+    <textarea id="decode-content"></textarea>
+    <span id="decode-result"></span>
+    <button onclick="decode()">Decode</button>
+</main>
 
 <script>
   function encode(key) {

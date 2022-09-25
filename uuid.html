@@ -3,22 +3,24 @@
 <head>
     <meta charset="utf-8"/>
     <title>Tools - JWT</title>
-    <script src="components/header.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="components/sidebar-component.js"></script>
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
-<header-component></header-component>
+<sidebar-component></sidebar-component>
 <main>
     <button onclick="generate()">Generate</button>
-    <code id="result" ></code>
+    <code id="result"></code>
 </main>
 <script>
   const crypto = window.crypto;
   const result = document.getElementById('result')
+
   function generate() {
     result.innerHTML = crypto.randomUUID();
   }
-  result.addEventListener('click', function() {
+
+  result.addEventListener('click', function () {
     navigator.clipboard.writeText(result.innerHTML);
   });
 
