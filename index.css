@@ -1,10 +1,7 @@
-/*@import url("https://cdnjs.cloudflare.com/ajax/libs/picnic/7.1.0/picnic.min.css");*/
-/*@import url("https://unpkg.com/@picocss/pico@latest/css/pico.min.css");*/
-/*@import url("https://unpkg.com/mvp.css");*/
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"); */
-/* @import url("https://unpkg.com/turretcss/dist/turretcss.min.css"); */
-/*@import url("https://unpkg.com/chota@latest");*/
-/*@layer environment {*/
+:root {
+    --header-height: 70px;
+}
+  
 * {
     margin: 0;
     padding: 0;
@@ -24,12 +21,32 @@ a {
 h4 {
     font-size: 1.5em;
 }
+h3 {
+    font-size: 2em;
+}
+ h2 {
+    font-size: 2.5em;
+ }
 ul {
     font-size: 1em;
     list-style: none;
 }
 ul > li {
     margin: 1.25em 0;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: #f6f6f6;
+    z-index: 1;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 textarea, input {
     padding: 1em;
@@ -80,6 +97,7 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
+    margin-top: var(--header-height)
 }
 main > *{
     margin-bottom: 1em;
@@ -99,6 +117,7 @@ body {
     height: 100%;
     background: #eee;
     padding: 1em;
+    margin-top: var(--header-height)
 }
 #sidebar > *{
     margin-bottom: 1em;
@@ -111,6 +130,7 @@ body {
     color: black;
     background-color: #eee;
     margin-top: 0.5em;
+    border-radius: 0.25em;
 }
 
 #output >table {
