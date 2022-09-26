@@ -1,8 +1,8 @@
 /*@import url("https://cdnjs.cloudflare.com/ajax/libs/picnic/7.1.0/picnic.min.css");*/
 /*@import url("https://unpkg.com/@picocss/pico@latest/css/pico.min.css");*/
 /*@import url("https://unpkg.com/mvp.css");*/
-/*@import url("https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css");*/
-@import url("https://unpkg.com/turretcss/dist/turretcss.min.css");
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"); */
+/* @import url("https://unpkg.com/turretcss/dist/turretcss.min.css"); */
 /*@import url("https://unpkg.com/chota@latest");*/
 /*@layer environment {*/
 * {
@@ -10,10 +10,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+ 
 
 html,
 body {
     height: 100%;
+}
+a {
+    font-size: 1em;
+    text-decoration: underline;
+    color: inherit;
+}
+h4 {
+    font-size: 1.5em;
+}
+ul {
+    font-size: 1em;
+    list-style: none;
+}
+ul > li {
+    margin: 1.25em 0;
+}
+textarea, input {
+    padding: 1em;
+    font-size: 1rem;
+    color: inherit;
+    border: 1px solid #d5d7dd;
+    background: #fff;
+    border-radius: 0.25em;
+}
+button {
+    color: #2e3138;
+    text-decoration: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: inline-block;
+    padding: calc((1.5rem - 2px)/2) 1em;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1rem;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: none;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #d5d7dd;
+    border-radius: 0.25em;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+button:hover {
+    background: #f5f6f9;
 }
 
 body {
