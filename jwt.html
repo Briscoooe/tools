@@ -3,17 +3,16 @@
 <head>
     <title>Tools - JWT</title>
     <script src="components/header-component.js"></script>
+    <script src="components/sidebar-component.js"></script>
     <link href="index.css" rel="stylesheet">
 </head>
 <body>
 <header-component></header-component>
 <sidebar-component></sidebar-component>
 <main>
-    <article>
-        <textarea id="content"></textarea>
-        <code id="output"></code>
-        <button onclick="parseJwt()">Parse</button>
-    </article>
+      <textarea id="content"></textarea>
+      <code id="output"></code>
+      <button onclick="parseJwt()">Parse</button>
 </main>
 <script>
   function parseJwt() {
