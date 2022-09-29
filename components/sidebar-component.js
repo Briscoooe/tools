@@ -77,7 +77,9 @@ class SidebarComponent extends HTMLElement {
           <h4>${group.name}</h4>
           <ul>
             ${group.links.map(link => `
-              <li><a href="${link.url}">${link.name}</a></li>
+              <li class="${location.href.includes(link.url) ? 'active' : ''}">
+                <a href="${link.url}">${link.name}</a>
+              </li>
             `).join('')}
           </ul>
         </div>

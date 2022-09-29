@@ -32,7 +32,7 @@ ul {
     list-style: none;
 }
 ul > li {
-    margin: 1.25em 0;
+    margin: 0.75em 0;
 }
 header {
     position: absolute;
@@ -120,8 +120,13 @@ body {
     padding: 1em;
     margin-top: var(--header-height)
 }
-#sidebar > *{
-    margin-bottom: 1em;
+
+#sidebar >  div > ul > li {
+    padding: 0.25em 0.25em;
+}
+.active {
+    background: black;
+    color: white;
 }
 
 #output {
