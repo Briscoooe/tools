@@ -1,5 +1,11 @@
 :root {
     --header-height: 70px;
+    --border-color: #797979;
+    --primary-color: #142e62;
+    --secondary-color: #f5f6f9;
+    --text-color-dark: #333;
+    --text-color-light: #eee;
+    --rounding: 0.5em;
 }
   
 * {
@@ -12,11 +18,13 @@
 html,
 body {
     height: 100%;
+    font-family: serif;
 }
 a {
     font-size: 1em;
     text-decoration: underline;
     color: inherit;
+    text-underline-offset: 0.2em;
 }
 h4 {
     font-size: 1.5em;
@@ -32,7 +40,7 @@ ul {
     list-style: none;
 }
 ul > li {
-    margin: 0.75em 0;
+    margin: 0;
 }
 header {
     position: absolute;
@@ -40,8 +48,8 @@ header {
     left: 0;
     width: 100%;
     height: var(--header-height);
-    background-color: black;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     z-index: 1;
     padding: 1em;
     display: flex;
@@ -52,10 +60,10 @@ header {
 textarea, input {
     padding: 1em;
     font-size: 1rem;
-    color: inherit;
-    border: 1px solid #d5d7dd;
+    color: var(--text-color-dark);
+    border: 2px solid var(--border-color);
     background: #fff;
-    border-radius: 0.25em;
+    border-radius: var(--rounding);
 }
 button {
     color: #2e3138;
@@ -76,8 +84,8 @@ button {
     white-space: nowrap;
     cursor: pointer;
     background: #fff;
-    border: 1px solid #d5d7dd;
-    border-radius: 0.25em;
+    border: 1px solid var(--border-color);
+    border-radius: var(--rounding);
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
@@ -86,11 +94,12 @@ button:hover {
 }
 
 body {
-    color: #333;
+    color: var(--text-color-dark);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
 }
+
 
 main {
     flex: 1 0 auto;
@@ -98,9 +107,12 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
-    margin-top: var(--header-height)
+    margin-top: var(--header-height);
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    flex-shrink: inherit;
 }
-main > *{
+main > * {
     margin-bottom: 1em;
 }
 
@@ -116,27 +128,37 @@ body {
 
 #sidebar {
     height: 100%;
-    background: #eee;
+    background: var(--secondary-color);
     padding: 1em;
-    margin-top: var(--header-height)
+    margin-top: var(--header-height);
+    width: 250px
 }
 
-#sidebar >  div > ul > li {
-    padding: 0.25em 0.25em;
+.sidebar-link {
+    padding: 0.4em 0;
+    letter-spacing: 0.025em;
 }
+
+.sidebar-link-group {
+    margin-bottom: 1em;
+}
+
 .active {
-    background: black;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    border-radius: var(--rounding);
+    font-weight: bold;
+    padding-left: 0.5em;
 }
 
 #output {
     font-size: 1.5em;
     overflow-y: auto;
     padding: 1em;
-    color: black;
-    background-color: #eee;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     margin-top: 0.5em;
-    border-radius: 0.25em;
+    border-radius: var(--rounding);
 }
 
 #output >table {

@@ -19,6 +19,9 @@ const linkGroups = [{
     }, {
       name: 'Word count',
       url: 'word-count.html'
+    }, {
+      name: 'Lorem ipsum',
+      url: 'lorem-ipsum.html'
     }
   ].sort((a, b) => a.name.localeCompare(b.name))
 }, {
@@ -73,11 +76,11 @@ class SidebarComponent extends HTMLElement {
     this.innerHTML = `
       <nav id="sidebar">
       ${linkGroups.map(group => `
-        <div>
+        <div class="sidebar-link-group">
           <h4>${group.name}</h4>
           <ul>
             ${group.links.map(link => `
-              <li class="${location.href.includes(link.url) ? 'active' : ''}">
+              <li class="sidebar-link ${location.href.includes(link.url) ? 'active' : ''}">
                 <a href="${link.url}">${link.name}</a>
               </li>
             `).join('')}

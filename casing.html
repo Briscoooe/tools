@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Tools - Sort</title>
+    <title>Tools - Casing</title>
     <script src="components/sidebar-component.js"></script>
     <script src="components/header-component.js"></script>
     <link href="index.css" rel="stylesheet">
@@ -12,7 +12,6 @@
 <sidebar-component></sidebar-component>
 <main>
     <textarea id="content"></textarea>
-    <button onclick="changeCase()">Change case</button>
     <select id="case-choice" title="case choice">
         <option value="upper">To uppercase</option>
         <option value="lower">To lowercase</option>
@@ -20,6 +19,8 @@
     <code id="output"></code>
 </main>
 <script>
+  document.getElementById('content').addEventListener('keyup', changeCase);
+  document.getElementById('case-choice').addEventListener('change', changeCase);
   function changeCase() {
     const content = document.getElementById('content').value;
     const caseChoice = document.getElementById('case-choice').value;

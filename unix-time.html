@@ -15,16 +15,36 @@
         <option value="to">To timestamp</option>
         <option value="from">From timestamp</option>
     </select>
-    <input id="from-date" type="date"/>
+    <input id="to-timestamp" type="date"/>
+    <input id="from-timestamp" type="number"/>
     <button onclick="convert()">Convert</button>
     <code id="output"></code>
 </main>
 <script>
+  function changeOperation() {
+    const operation = document.getElementById('operation-choice').value;
+    if (operation === 'to') {
+      document.getElementById('to-timestamp').style.display = 'block';
+      document.getElementById('from-timestamp').style.display = 'none';
+    } else {
+      document.getElementById('to-timestamp').style.display = 'none';
+      document.getElementById('from-timestamp').style.display = 'block';
+    }
+  }
+
+  document.getElementById('operation-choice').addEventListener('change', changeOperation);
+  changeOperation();
+
   function convert() {
     const operation = document.getElementById('operation-choice').value;
     if (operation === 'to') {
-      const fromDate = document.getElementById('from-date').value;
-      document.getElementById('output').innerHTML = new Date(fromDate).toISOString()
+      const date = document.getElementById('to-timestamp').value;
+      console.log(date)
+      document.getElementById('output').innerHTML = new Date(date).getTime() / 1000;
+    } else {
+      const timestamp = document.getElementById('from-timestamp').value;
+      const dateObj = new Date(timestamp * 1000);
+      document.getElementById('output').innerHTML = `${dateObj.toLocaleDateString()} ${dateObj.toLocaleTimeString()}`;
     }
   }
 

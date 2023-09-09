@@ -20,12 +20,12 @@
 </main>
 
 <script>
-  function encode(key) {
+  function encode() {
     const content = document.getElementById('encode-content').value;
     document.getElementById('encode-output').innerHTML = btoa(content);
   }
 
-  function decode(key) {
+  function decode() {
     const content = document.getElementById('decode-content').value;
     document.getElementById('decode-output').innerHTML = atob(content);
   }
