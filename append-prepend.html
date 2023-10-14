@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Tools - Append/prepend</title>
+    <script src="components/sidebar-component.js"></script>
+    <script src="components/header-component.js"></script>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+<header-component></header-component>
+<sidebar-component></sidebar-component>
+<main>
+    <select id="operation-choice" title="Operation choice">
+        <option value="append">Append</option>
+        <option value="prepend">Prepend</option>
+    </select>
+    <textarea id="input"></textarea>
+    <input id="text-to-add" type="text"/>
+    <button onclick="convert()">Convert</button>
+    <code id="output"></code>
+</main>
+<script>
+  function convert() {
+    const operation = document.getElementById('operation-choice').value;
+    const input = document.getElementById('input').value;
+    const lines = input.split('\n');
+    const textToAdd = document.getElementById('text-to-add').value;
+    if (operation === 'append') {
+      document.getElementById('output').innerHTML = lines.map(line => line + textToAdd).join('<br/>');
+    } else {
+      document.getElementById('output').innerHTML = lines.map(line => textToAdd + line).join('<br/>');
+    }
+  }
+
+</script>
+</body>
+</html>

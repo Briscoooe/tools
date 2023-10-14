@@ -22,6 +22,9 @@ const linkGroups = [{
     }, {
       name: 'Lorem ipsum',
       url: 'lorem-ipsum.html'
+    }, {
+      name: 'Append/Prepend',
+      url: 'append-prepend.html'
     }
   ].sort((a, b) => a.name.localeCompare(b.name))
 }, {
